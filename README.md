@@ -16,3 +16,6 @@ Grupo utilizado no replay : *Botnet*
  - *[botnet_NORMAL.pcap](replay-ndsec1/botnet_NORMAL.pcap)* : Tráfego Normal original;
  - *[botnet_NORMAL_mac-ip_mod.pcap](replay-ndsec1/botnet_NORMAL_mac-ip_mod.pcap)* : Tráfego Normal com MAC e IP alterados;
  - *[botnet_NORMAL_mac-ip_mod_httphost_mod.pcap](replay-ndsec1/botnet_NORMAL_mac-ip_mod_httphost_mod.pcap)* : Tráfego Normal com MAC, IP e HTTP host/referer alterados.
+
+### Dataset de telemetria gerado
+
