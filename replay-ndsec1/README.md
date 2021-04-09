@@ -4,7 +4,7 @@
 https://www2.hs-fulda.de/NDSec/NDSec-1/  
 https://www2.hs-fulda.de/NDSec/NDSec-1/Files/  
 
-Grupo utilizado : *Botnet*
+Grupo utilizado no replay : *Botnet*
 
 ## Tráfego SYN-Flood
  - *botnet_SYN-FLOOD.pcap* : Tráfego SYN-Flood original;
