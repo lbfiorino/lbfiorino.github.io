@@ -1,5 +1,5 @@
 clouds:
-  ifes_serra:
+  cloud_name:
     region_name: RegionOne
     auth:
       username: 'username'
