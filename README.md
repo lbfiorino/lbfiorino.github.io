@@ -19,19 +19,19 @@ Grupo utilizado no replay : *Botnet*
 
 
 ## Tráfego Replicado
- - *[botnet_NORMAL_replay.pcap](botnet_NORMAL_replay.pcap)* : Tráfego Normal replicado com o script desenvolvido;
- - *[botnet_SYN-FLOOD_replay_moongen.pcap](botnet_SYN-FLOOD_replay_moongen.pcap)* : Tráfego SYN-Flood replicado com a ferramenta MoonGen;
- - *[botnet_SYN-FLOOD_replay_tcpreplay.pcap](botnet_SYN-FLOOD_replay_tcpreplay.pcap)* : Tráfego SYN-Flood replicado com a ferramenta Tcpreplay.
+ - *[botnet_NORMAL_replay.pcap](replay-ndsec1/botnet_NORMAL_replay.pcap)* : Tráfego Normal replicado com o script desenvolvido;
+ - *[botnet_SYN-FLOOD_replay_moongen.pcap](replay-ndsec1/botnet_SYN-FLOOD_replay_moongen.pcap)* : Tráfego SYN-Flood replicado com a ferramenta MoonGen;
+ - *[botnet_SYN-FLOOD_replay_tcpreplay.pcap](replay-ndsec1/botnet_SYN-FLOOD_replay_tcpreplay.pcap)* : Tráfego SYN-Flood replicado com a ferramenta Tcpreplay.
 
 
 ## Códigos Python
- - *[agent-gnocchi-offline.py](agent-gnocchi-offline.py)* : Script para coletar as métricas no Gnocchi;
- - *[botnet_extract_normal_syn-flood.py](botnet_extract_normal_syn-flood.py)* : Script para extrair os tráfegos Normal/Syn-Flood do dataset NDSec-1 e gerar os arquivos PCAP para replicação;
- - *[edit_http_request_pcap.py](edit_http_request_pcap.py)* : Script para editar os campus *Host* e *Referer* do cabeçalho HTTP;
- - *[edit_packet_timestamp.py](edit_packet_timestamp.py)* : Script para editar a precisão (casas decimais) do timestamp para extrair os pacotes corretamente;
- - *[replay_normal.py](replay_normal.py)* : Script para replicar o tráfego normal utilizando Python Requests.
+ - *[agent-gnocchi-offline.py](replay-ndsec1/agent-gnocchi-offline.py)* : Script para coletar as métricas no Gnocchi;
+ - *[botnet_extract_normal_syn-flood.py](replay-ndsec1/botnet_extract_normal_syn-flood.py)* : Script para extrair os tráfegos Normal/Syn-Flood do dataset NDSec-1 e gerar os arquivos PCAP para replicação;
+ - *[edit_http_request_pcap.py](replay-ndsec1/edit_http_request_pcap.py)* : Script para editar os campus *Host* e *Referer* do cabeçalho HTTP;
+ - *[edit_packet_timestamp.py](replay-ndsec1/edit_packet_timestamp.py)* : Script para editar a precisão (casas decimais) do timestamp para extrair os pacotes corretamente;
+ - *[replay_normal.py](replay-ndsec1/replay_normal.py)* : Script para replicar o tráfego normal utilizando Python Requests.
 
 
 ## Dataset de Telemetria Gerado
- - *[telemetry_dataset_normal.csv](telemetry_dataset_normal.csv)* : Dataset de telemetria do tráfego Normal;
- - *[telemetry_dataset_syn-flood.csv](telemetry_dataset_syn-flood.csv)* : Dataset de telemetria do tráfego SYN-Flood.
+ - *[telemetry_dataset_normal.csv](replay-ndsec1/telemetry_dataset_normal.csv)* : Dataset de telemetria do tráfego Normal;
+ - *[telemetry_dataset_syn-flood.csv](replay-ndsec1/telemetry_dataset_syn-flood.csv)* : Dataset de telemetria do tráfego SYN-Flood.
