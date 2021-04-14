@@ -1,17 +1,69 @@
-<h1 id="lbfiorino-github-io">lbfiorino.github.io</h1>
-<h2 id="arquivos-do-replay-do-dataset-ndsec-1">Arquivos do replay do dataset NDSec-1</h2>
-<h3 id="dataset-ndsec-1">Dataset NDSec-1</h3>
-<p><a href="https://www2.hs-fulda.de/NDSec/NDSec-1/">https://www2.hs-fulda.de/NDSec/NDSec-1/</a><br><a href="https://www2.hs-fulda.de/NDSec/NDSec-1/Files/">https://www2.hs-fulda.de/NDSec/NDSec-1/Files/</a>  </p>
-<p>Grupo utilizado no replay : <em>Botnet</em></p>
-<h3 id="tr-fego-syn-flood">Tráfego SYN-Flood</h3>
-<ul>
-<li><em><a href="replay-ndsec1/botnet_SYN-FLOOD.pcap">botnet_SYN-FLOOD.pcap</a></em> : Tráfego SYN-Flood original;</li>
-<li><em><a href="replay-ndsec1/botnet_SYN-FLOOD_mac-ip_mod.pcap">botnet_SYN-FLOOD_mac-ip_mod.pcap</a></em> : Tráfego SYN-Flood com MAC e IP alterados.</li>
-</ul>
-<h3 id="tr-fego-normal">Tráfego Normal</h3>
-<ul>
-<li><em><a href="replay-ndsec1/botnet_NORMAL.pcap">botnet_NORMAL.pcap</a></em> : Tráfego Normal original;</li>
-<li><em><a href="replay-ndsec1/botnet_NORMAL_mac-ip_mod.pcap">botnet_NORMAL_mac-ip_mod.pcap</a></em> : Tráfego Normal com MAC e IP alterados;</li>
-<li><em><a href="replay-ndsec1/botnet_NORMAL_mac-ip_mod_httphost_mod.pcap">botnet_NORMAL_mac-ip_mod_httphost_mod.pcap</a></em> : Tráfego Normal com MAC, IP e HTTP host/referer alterados.</li>
-</ul>
-<h3 id="dataset-de-telemetria-gerado">Dataset de telemetria gerado</h3>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="lbfiorino-github-io">lbfiorino.github.io</h1>
+    <h2 id="experimento-de-replica-o-do-dataset-ndsec-1">Experimento de replicação do dataset NDSec-1</h2>
+    <h3 id="dataset-ndsec-1">Dataset NDSec-1</h3>
+    <p><a href="https://www2.hs-fulda.de/NDSec/NDSec-1/">https://www2.hs-fulda.de/NDSec/NDSec-1/</a><br><a
+            href="https://www2.hs-fulda.de/NDSec/NDSec-1/Files/">https://www2.hs-fulda.de/NDSec/NDSec-1/Files/</a> </p>
+    <p>Grupo utilizado no replay : <em>Botnet</em></p>
+    <h3 id="tr-fego-syn-flood">Tráfego SYN-Flood</h3>
+    <ul>
+        <li><em><a href="replay-ndsec1/botnet_SYN-FLOOD.pcap">botnet_SYN-FLOOD.pcap</a></em> : Tráfego SYN-Flood
+            original;</li>
+        <li><em><a href="replay-ndsec1/botnet_SYN-FLOOD_mac-ip_mod.pcap">botnet_SYN-FLOOD_mac-ip_mod.pcap</a></em> :
+            Tráfego SYN-Flood com MAC e IP alterados.</li>
+    </ul>
+    <h3 id="tr-fego-normal">Tráfego Normal</h3>
+    <ul>
+        <li><em><a href="replay-ndsec1/botnet_NORMAL.pcap">botnet_NORMAL.pcap</a></em> : Tráfego Normal original;</li>
+        <li><em><a href="replay-ndsec1/botnet_NORMAL_mac-ip_mod.pcap">botnet_NORMAL_mac-ip_mod.pcap</a></em> : Tráfego
+            Normal com MAC e IP alterados;</li>
+        <li><em><a
+                    href="replay-ndsec1/botnet_NORMAL_mac-ip_mod_httphost_mod.pcap">botnet_NORMAL_mac-ip_mod_httphost_mod.pcap</a></em>
+            : Tráfego Normal com MAC, IP e HTTP host/referer alterados.</li>
+    </ul>
+    <h3 id="tr-fego-replicado">Tráfego Replicado</h3>
+    <ul>
+        <li><em><a href="replay-ndsec1/botnet_NORMAL_replay.pcap">botnet_NORMAL_replay.pcap</a></em> : Tráfego Normal
+            replicado com o script desenvolvido;</li>
+        <li><em><a
+                    href="replay-ndsec1/botnet_SYN-FLOOD_replay_moongen.pcap">botnet_SYN-FLOOD_replay_moongen.pcap</a></em>
+            : Tráfego SYN-Flood replicado com a ferramenta MoonGen;</li>
+        <li><em><a
+                    href="replay-ndsec1/botnet_SYN-FLOOD_replay_tcpreplay.pcap">botnet_SYN-FLOOD_replay_tcpreplay.pcap</a></em>
+            : Tráfego SYN-Flood replicado com a ferramenta Tcpreplay.</li>
+    </ul>
+    <h3 id="c-digos-python">Códigos Python</h3>
+    <ul>
+        <li><em><a href="replay-ndsec1/agent-gnocchi-offline.py">agent-gnocchi-offline.py</a></em> : Script para coletar
+            as métricas no Gnocchi;</li>
+        <li><em><a href="replay-ndsec1/botnet_extract_normal_syn-flood.py">botnet_extract_normal_syn-flood.py</a></em> :
+            Script para extrair os tráfegos Normal/Syn-Flood do dataset NDSec-1 e gerar os arquivos PCAP para
+            replicação;</li>
+        <li><em><a href="replay-ndsec1/edit_http_request_pcap.py">edit_http_request_pcap.py</a></em> : Script para
+            editar os campus <em>Host</em> e <em>Referer</em> do cabeçalho HTTP;</li>
+        <li><em><a href="replay-ndsec1/edit_packet_timestamp.py">edit_packet_timestamp.py</a></em> : Script para editar
+            a precisão (casas decimais) do timestamp para extrair os pacotes corretamente;</li>
+        <li><em><a href="replay-ndsec1/replay_normal.py">replay_normal.py</a></em> : Script para replicar o tráfego
+            normal utilizando Python Requests.</li>
+    </ul>
+    <h3 id="dataset-de-telemetria-gerado">Dataset de Telemetria Gerado</h3>
+    <ul>
+        <li><em><a href="replay-ndsec1/telemetry_dataset_normal.csv">telemetry_dataset_normal.csv</a></em> : Dataset de
+            telemetria do tráfego Normal;</li>
+        <li><em><a href="replay-ndsec1/telemetry_dataset_syn-flood.csv">telemetry_dataset_syn-flood.csv</a></em> :
+            Dataset de telemetria do tráfego SYN-Flood.</li>
+    </ul>
+</body>
+
+</html>
