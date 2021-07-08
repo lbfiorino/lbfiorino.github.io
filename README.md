@@ -1,8 +1,8 @@
 # lbfiorino.github.io
 
-## Experimento de replicação de tráfegos de rede do dataset NDSec-1
+## Experimento de replicação de tráfegos de rede do _dataset_ NDSec-1
 
-### Dataset NDSec-1
+### _Dataset_ NDSec-1
 [https://www2.hs-fulda.de/NDSec/NDSec-1/](https://www2.hs-fulda.de/NDSec/NDSec-1/)  
 [https://www2.hs-fulda.de/NDSec/NDSec-1/Files/](https://www2.hs-fulda.de/NDSec/NDSec-1/Files/)  
 
