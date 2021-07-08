@@ -33,5 +33,5 @@ Grupo utilizado no _replay_ : *Botnet*
 
 
 ### Dataset de Telemetria Gerado
- - *[telemetry_dataset_normal.csv](replay-ndsec1/telemetry_dataset_normal.csv)* : Dataset de telemetria do tráfego Normal;
- - *[telemetry_dataset_syn-flood.csv](replay-ndsec1/telemetry_dataset_syn-flood.csv)* : Dataset de telemetria do tráfego SYN-Flood.
+ - *[telemetry_dataset_replay.csv](replay-ndsec1/telemetry_dataset_replay.csv)*
+ 
