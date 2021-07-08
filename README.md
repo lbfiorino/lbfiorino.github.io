@@ -6,7 +6,7 @@
 [https://www2.hs-fulda.de/NDSec/NDSec-1/](https://www2.hs-fulda.de/NDSec/NDSec-1/)  
 [https://www2.hs-fulda.de/NDSec/NDSec-1/Files/](https://www2.hs-fulda.de/NDSec/NDSec-1/Files/)  
 
-Grupo utilizado no replay : *Botnet*
+Grupo utilizado no _replay_ : *Botnet*
 
 ### Tráfego SYN-Flood
  - *[botnet_SYN-FLOOD.pcap](replay-ndsec1/botnet_SYN-FLOOD.pcap)* : Tráfego SYN-Flood original;
