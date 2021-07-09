@@ -28,5 +28,6 @@ Grupo do dataset utilizado na replicação : *Botnet*
  - *replay_normal.py* : Script para replicar o tráfego normal utilizando Python Requests.
 
 ## Dataset de Telemetria Gerado
- - *telemetry_dataset_normal.csv* : Dataset de telemetria do tráfego Normal;
- - *telemetry_dataset_syn-flood.csv* : Dataset de telemetria do tráfego SYN-Flood.
+ - *telemetry_dataset_replay.csv* : Dataset de telemetria;
+ - *telemetry_dataset_normal.csv* : Telemetria do tráfego Normal;
+ - *telemetry_dataset_syn-flood.csv* : Telemetria do tráfego SYN-Flood.
