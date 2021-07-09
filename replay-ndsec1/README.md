@@ -29,5 +29,5 @@ Grupo do dataset utilizado na replicação : *Botnet*
 
 ## Dataset de Telemetria Gerado
  - *telemetry_dataset_replay.csv* : Dataset de telemetria;
- - *telemetry_dataset_normal.csv* : Telemetria do tráfego Normal;
- - *telemetry_dataset_syn-flood.csv* : Telemetria do tráfego SYN-Flood.
+ - *telemetry_normal_traffic.csv* : Telemetria do tráfego Normal;
+ - *telemetry_syn-flood_traffic.csv* : Telemetria do tráfego SYN-Flood.
