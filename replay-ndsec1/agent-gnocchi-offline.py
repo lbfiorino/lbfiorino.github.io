@@ -301,7 +301,7 @@ class Gnocchi():
 
 def main():
 
-    auth_session = OpenStack_Auth(cloud_name='ifes_serra')
+    auth_session = OpenStack_Auth(cloud_name='cloudname')
     sess = auth_session.get_session()
     gnocchi = Gnocchi(session=sess)
 
