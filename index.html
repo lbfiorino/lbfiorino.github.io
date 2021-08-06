@@ -31,7 +31,8 @@
         <h3
             id="-reprodutibilidade-e-extensibilidade-de-experimentos-um-estudo-da-replica-o-de-datasets-de-tr-fego-de-rede-">
             <em>Reprodutibilidade e Extensibilidade de Experimentos: um estudo da replicação de datasets de tráfego de
-                rede</em>.</h3>
+                rede</em>.
+        </h3>
 
         <h2 id="experimento-de-replica-o-de-traces-de-pacotes-contidos-em-arquivos-pcap-de-um-dataset-da-literatura">
             Experimento
@@ -98,26 +99,34 @@
         </ul>
         <h3 id="c-digos-python">Códigos Python</h3>
         <p>A seguir são disponibilizadas os códigos utilizados em cada passo do experimento.</p>
-        <ul>
+        <ol>
             <li><em><a href="replay-ndsec1/edit_packet_timestamp.py">edit_packet_timestamp.py</a></em> : Script para
-                editar
-                a
-                precisão (casas decimais) do <em>timestamp</em> para extrair os pacotes corretamente;
-            <li><em><a
-                        href="replay-ndsec1/botnet_extract_normal_syn-flood.py">botnet_extract_normal_syn-flood.py</a></em>
-                : Script para extrair os tráfegos originais Normal/Syn-Flood do <em>dataset</em> NDSec-1 e gerar os
-                arquivos PCAP para replicação;</li>
-            <li><em><a href="replay-ndsec1/edit_http_request_pcap.py">edit_http_request_pcap.py</a></em> : Script para
-                editar os
-                campos <em>Host</em> e <em>Referer</em> do cabeçalho HTTP;</li>
-            <li><em><a href="replay-ndsec1/replay_normal.py">replay_normal.py</a></em> : Script para replicar o tráfego
-                normal
-                utilizando Python Requests;</li>
-            <li><em><a href="replay-ndsec1/agent-gnocchi-offline.py">agent-gnocchi-offline.py</a></em> : Script para
-                coletar
-                as
-                métricas no Gnocchi e gerar o <em>dataset</em> do experimento.</li>
-        </ul>
+                editar a precisão (casas decimais) do <em>timestamp</em> para extrair os pacotes corretamente.<br>Este
+                script altera as casas decimais do PCAP original de 6 para 3 casas, pois nas amostras do dataset a
+                precisão está com 3 casas deciamais. Um novo arquivo PCAP é gerado para o passo seguitne.
+            </li>
+            <li>
+                <p><em><a
+                            href="replay-ndsec1/botnet_extract_normal_syn-flood.py">botnet_extract_normal_syn-flood.py</a></em>
+                    : Script para extrair os tráfegos originais Normal/Syn-Flood do <em>dataset</em> NDSec-1 e gerar os
+                    arquivos PCAP para replicação.<br>Este script extrai do PCAP gerado no passo 1 os números dos frames
+                    dos tráfegos de interesse e, posteriormente, extrais os pacotes correspondentes aos números dos
+                    frames do PCAP original.</p>
+            </li>
+            <li>
+                <p><em><a href="replay-ndsec1/edit_http_request_pcap.py">edit_http_request_pcap.py</a></em> : Script
+                    para editar os campos <em>Host</em> e <em>Referer</em> do cabeçalho HTTP do tráfego Normal;</p>
+            </li>
+            <li>
+                <p><em><a href="replay-ndsec1/replay_normal.py">replay_normal.py</a></em> : Script para replicar o
+                    tráfego Normal utilizando Python Requests;</p>
+            </li>
+            <li>
+                <p><em><a href="replay-ndsec1/agent-gnocchi-offline.py">agent-gnocchi-offline.py</a></em> : Script para
+                    coletar as métricas no Gnocchi e gerar o <em>dataset</em> do experimento.</p>
+            </li>
+        </ol>
+
         <h3 id="dataset-de-telemetria-gerado">Dataset de Telemetria Gerado</h3>
         <p><em>Dataset</em> gerado a partir das coletas das métricas do serviço de telemetria OpenStack. A política de
             coleta do
