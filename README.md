@@ -1,7 +1,7 @@
 # GitHub Luciano B. Fiorino
 
 ## Artigo
-### *Reprodutibilidade e Extensibilidade de Experimentos: um estudo da replicação de datasets de tráfego de rede*.
+### *Reprodutibilidade e Extensibilidade de Datasets de Tráfego de Rede: um estudo da replicação de traces de pacotes*.
 
 ## Experimento de replicação de *traces* de pacotes contidos em arquivos PCAP de um *dataset* da literatura
 
