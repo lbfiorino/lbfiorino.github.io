@@ -47,7 +47,7 @@ Este script extrai do PCAP gerado no passo 1 os números dos frames dos tráfego
 
 3. *[edit_http_request_pcap.py](replay-ndsec1/edit_http_request_pcap.py)* : Script para editar os campos *Host* e *Referer* do cabeçalho HTTP do tráfego Normal;
 
-4. *[edit_mac_ip_pcap.py](replay-ndsec1/edit_mac_ip_pcap.py)* : Script para alteras os endereços IP e MAC dos pacotes;
+4. *[edit_mac_ip_pcap.py](replay-ndsec1/edit_mac_ip_pcap.py)* : Script para alterar os endereços IP e MAC dos pacotes;
 
 5. *[replay_normal.py](replay-ndsec1/replay_normal.py)* : Script para replicar o tráfego Normal utilizando Python Requests;
 
