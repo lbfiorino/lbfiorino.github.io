@@ -2,6 +2,7 @@
 
 ## Artigo
 ### *Reprodutibilidade e Extensibilidade de Datasets de Tráfego de Rede: um estudo da replicação de traces de pacotes*.
+https://github.com/lbfiorino/lbfiorino.github.io/tree/main/replay-ndsec1
 
 ## Experimento de replicação de *traces* de pacotes contidos em arquivos PCAP de um *dataset* da literatura
 
