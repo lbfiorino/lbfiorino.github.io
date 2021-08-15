@@ -24,7 +24,7 @@ Grupo do dataset utilizado na replicação : *Botnet*
  - *agent-gnocchi-offline.py* : Script para coletar as métricas no Gnocchi;
  - *botnet_extract_normal_syn-flood.py* : Script para extrair os tráfegos Normal/Syn-Flood do dataset NDSec-1 e gerar os arquivos PCAP para replicação;
  - *edit_http_request_pcap.py* : Script para editar os campos *Host* e *Referer* do cabeçalho HTTP;
- - *edit_mac_ip_pcap.py* : Script para alteras os endereços IP e MAC dos pacotes;
+ - *edit_mac_ip_pcap.py* : Script para alterar os endereços IP e MAC dos pacotes;
  - *edit_packet_timestamp.py* : Script para editar a precisão (casas decimais) do timestamp para extrair os pacotes corretamente;
  - *replay_normal.py* : Script para replicar o tráfego normal utilizando Python Requests.
 
