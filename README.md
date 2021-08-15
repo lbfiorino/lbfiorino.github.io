@@ -47,9 +47,11 @@ Este script extrai do PCAP gerado no passo 1 os números dos frames dos tráfego
 
 3. *[edit_http_request_pcap.py](replay-ndsec1/edit_http_request_pcap.py)* : Script para editar os campos *Host* e *Referer* do cabeçalho HTTP do tráfego Normal;
 
-4. *[replay_normal.py](replay-ndsec1/replay_normal.py)* : Script para replicar o tráfego Normal utilizando Python Requests;
+4. *[edit_mac_ip_pcap.py](replay-ndsec1/edit_mac_ip_pcap.py)* : Script para alteras os endereços IP e MAC dos pacotes;
 
-5. *[agent-gnocchi-offline.py](replay-ndsec1/agent-gnocchi-offline.py)* : Script para coletar as métricas no Gnocchi e gerar o *dataset* do experimento.
+5. *[replay_normal.py](replay-ndsec1/replay_normal.py)* : Script para replicar o tráfego Normal utilizando Python Requests;
+
+6. *[agent-gnocchi-offline.py](replay-ndsec1/agent-gnocchi-offline.py)* : Script para coletar as métricas no Gnocchi e gerar o *dataset* do experimento.
 
 ### Dataset de Telemetria Gerado
 *Dataset* gerado a partir das coletas das métricas do serviço de telemetria OpenStack. A política de coleta do serviço de telemetria estava configurada com granularidade de 5 segundos. Dessa forma, cada amostra do *dataset* gerado corresponde a coletas das métricas a cada 5 segundos.
