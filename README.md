@@ -58,6 +58,6 @@ Este script extrai do PCAP gerado no passo 1 os números dos frames dos tráfego
 *Dataset* gerado a partir das coletas das métricas do serviço de telemetria OpenStack. A política de coleta do serviço de telemetria estava configurada com granularidade de 5 segundos. Dessa forma, cada amostra do *dataset* gerado corresponde a coletas das métricas a cada 5 segundos.
 
  - *[telemetry_dataset_replay.csv](replay-ndsec1/telemetry_dataset_replay.csv)* : Dataset de telemetria;
- - *[telemetry_normal_traffic.csv](replay-ndsec1/telemetry_normal_traffic.csv .csv)* : Telemetria do tráfego Normal;
+ - *[telemetry_normal_traffic.csv](replay-ndsec1/telemetry_normal_traffic.csv)* : Telemetria do tráfego Normal;
  - *[telemetry_syn-flood_traffic.csv](replay-ndsec1/telemetry_syn-flood_traffic.csv)* : Telemetria do tráfego SYN-Flood.
  
