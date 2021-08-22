@@ -28,6 +28,20 @@ Grupo do dataset utilizado na replicação : *Botnet*
  - *edit_packet_timestamp.py* : Script para editar a precisão (casas decimais) do timestamp para extrair os pacotes corretamente;
  - *replay_normal.py* : Script para replicar o tráfego normal utilizando Python Requests.
 
+Para corrigir os checksums IP/TCP dos pacotes foi utilizada a ferramenta `tcprewrite`.
+```
+# PARAMS
+#    -C, --fixcsum
+#           Force recalculation of IPv4/TCP/UDP header checksums.
+#    -i string, --infile=string
+#           Input pcap file to be processed. 
+#    -o string, --outfile=string
+#           Output pcap file.  
+
+$ tcprewrite -C -i <INFILE.pcap> -o <OUTFILE.pcap>
+```
+
+
 ## Dataset de Telemetria Gerado
  - *telemetry_dataset_replay.csv* : Dataset de telemetria;
  - *telemetry_normal_traffic.csv* : Telemetria do tráfego Normal;
