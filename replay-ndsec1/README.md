@@ -29,8 +29,7 @@ Grupo do dataset utilizado na replicação : *Botnet*
  - *edit_mac_ip_pcap.py* : Script para alterar os endereços IP e MAC dos pacotes;
  - *edit_packet_timestamp.py* : Script para editar a precisão (casas decimais) do timestamp para extrair os pacotes corretamente;
  
-Para corrigir os checksums IP/TCP dos pacotes foi utilizada a ferramenta <a href="https://tcpreplay.appneta.com" target="_blank">tcprewrite</a>
-[`tcprewrite`](https://tcpreplay.appneta.com/).
+Para corrigir os checksums IP/TCP dos pacotes foi utilizada a ferramenta [`tcprewrite`](https://tcpreplay.appneta.com/).
 ```
 $ tcprewrite -C -i <INFILE.pcap> -o <OUTFILE.pcap>
 ```
