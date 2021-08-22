@@ -14,7 +14,7 @@ Grupo do dataset utilizado na replicação : *Botnet*
 ## Tráfego Normal
  - *botnet_NORMAL.pcap* : Tráfego Normal original;
  - *botnet_NORMAL_mac-ip_mod.pcap* : Tráfego Normal com MAC e IP alterados;
- - *botnet_NORMAL_mac-ip_mod_httphost_mod.pcap* : Tráfego Normal com MAC, IP e HTTP host/referer alterados.
+ - *botnet_NORMAL_mac-ip-httphost-mod_fix-chksum.pcap* : Tráfego Normal com MAC, IP e HTTP host/referer alterados.
 
 ## Tráfego Replicado
  - *botnet_NORMAL_replay.pcap* : Tráfego Normal replicado com o script desenvolvido;
