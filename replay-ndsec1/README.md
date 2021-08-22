@@ -23,7 +23,7 @@ Grupo do dataset utilizado na replicação : *Botnet*
  - *botnet_SYN-FLOOD_replay_tcpreplay.pcap* : Tráfego SYN-Flood replicado com a ferramenta Tcpreplay.
 
 ## Códigos Python
- - *agent-gnocchi-offline.py* : Script para coletar as métricas no Gnocchi;
+ - *agent-gnocchi-offline.py* : Script para coletar as métricas de telemetria no Gnocchi;
  - *botnet_extract_normal_syn-flood.py* : Script para extrair os tráfegos Normal/Syn-Flood do dataset NDSec-1 e gerar os arquivos PCAP para replicação;
  - *edit_http_request_pcap.py* : Script para editar os campos *Host* e *Referer* do cabeçalho HTTP;
  - *edit_mac_ip_pcap.py* : Script para alterar os endereços IP e MAC dos pacotes;
