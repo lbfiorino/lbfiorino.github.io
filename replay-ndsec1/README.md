@@ -43,6 +43,15 @@ $ tcprewrite -C -i <INFILE.pcap> -o <OUTFILE.pcap>
 
 
 ## Dataset de Telemetria Gerado
+
+- *telemetry_dataset_replay.csv* : Dataset de telemetria;
+Para compor o dataset foram considerados os dados coletados a partir da replicação dos traces com as ferramentas GoReplay e Tcpreplay.
+
+- *telemetry_normal_goreplay.csv* : Telemetria do tráfego Normal replicado com a ferramenta GoReplay;
+- *telemetry_syn-flood_gophercap.csv* : Telemetria do tráfego SYN-Flood replicado com a ferramenta GopherCap.
+- *telemetry_syn-flood_moongen.csv* : Telemetria do tráfego SYN-Flood replicado com a ferramenta Moongen.
+- *telemetry_syn-flood_tcpreplay.csv*: Telemetria do tráfego SYN-Flood replicado com a ferramenta Tcpreplay.
+
  - *telemetry_dataset_replay.csv* : Dataset de telemetria;
  - *telemetry_normal_traffic.csv* : Telemetria do tráfego Normal;
  - *telemetry_syn-flood_traffic.csv* : Telemetria do tráfego SYN-Flood.
