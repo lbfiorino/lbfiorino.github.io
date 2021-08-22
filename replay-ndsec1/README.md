@@ -13,8 +13,8 @@ Grupo do dataset utilizado na replicação : *Botnet*
  
 ## Tráfego Normal
  - *botnet_NORMAL.pcap* : Tráfego Normal original;
- - *botnet_NORMAL_mac-ip_mod.pcap* : Tráfego Normal com MAC e IP alterados;
- - *botnet_NORMAL_mac-ip-httphost-mod_fix-chksum.pcap* : Tráfego Normal com MAC, IP e HTTP host/referer alterados.
+ - *botnet_NORMAL_mac-ip-httphost-mod_fix-chksum.pcap* : Tráfego Normal com endereços MAC, IP, HTTP Host alterados, e checksums recalculados;
+ - *botnet_NORMAL_mac-ip-httphost-mod_fix-chksum_requests_0.gor* : Requisições HTTP extraídas do PCAP anterior com a ferramenta GoReplay para replicação.
 
 ## Tráfego Replicado
  - *botnet_NORMAL_replay.pcap* : Tráfego Normal replicado com o script desenvolvido;
@@ -28,21 +28,11 @@ Grupo do dataset utilizado na replicação : *Botnet*
  - *edit_http_request_pcap.py* : Script para editar os campos *Host* e *Referer* do cabeçalho HTTP;
  - *edit_mac_ip_pcap.py* : Script para alterar os endereços IP e MAC dos pacotes;
  - *edit_packet_timestamp.py* : Script para editar a precisão (casas decimais) do timestamp para extrair os pacotes corretamente;
- - *replay_normal.py* : Script para replicar o tráfego normal utilizando Python Requests.
-
+ 
 Para corrigir os checksums IP/TCP dos pacotes foi utilizada a ferramenta `tcprewrite`.
 ```
-# PARAMS
-#    -C, --fixcsum
-#           Force recalculation of IPv4/TCP/UDP header checksums.
-#    -i string, --infile=string
-#           Input pcap file to be processed. 
-#    -o string, --outfile=string
-#           Output pcap file.  
-
 $ tcprewrite -C -i <INFILE.pcap> -o <OUTFILE.pcap>
 ```
-
 
 ## Dataset de Telemetria Gerado
 Para compor o dataset foram considerados os dados coletados a partir da replicação dos traces com as ferramentas GoReplay e Tcpreplay.
