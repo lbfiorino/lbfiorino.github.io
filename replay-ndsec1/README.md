@@ -8,7 +8,8 @@ Grupo do dataset utilizado na replicação : *Botnet*
 
 ## Tráfego SYN-Flood
  - *botnet_SYN-FLOOD.pcap* : Tráfego SYN-Flood original;
- - *botnet_SYN-FLOOD_mac-ip_mod.pcap* : Tráfego SYN-Flood com MAC e IP alterados.
+ - *botnet_SYN-FLOOD_syn.pcap* : Apenas os pacotes SYN;
+ - *botnet_SYN-FLOOD_syn_mac-ip-mod_fix-chksum.pcap* : Tráfego SYN-Flood com endereços MAC e IP alterados, e checksums recalculados.
  
 ## Tráfego Normal
  - *botnet_NORMAL.pcap* : Tráfego Normal original;
