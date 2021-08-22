@@ -17,7 +17,7 @@ Grupo do dataset utilizado na replicação : *Botnet*
  - *botnet_NORMAL_mac-ip-httphost-mod_fix-chksum_requests_0.gor* : Requisições HTTP extraídas do PCAP anterior com a ferramenta GoReplay para replicação.
 
 ## Tráfego Replicado
- - *botnet_NORMAL_replay.pcap* : Tráfego Normal replicado com o script desenvolvido;
+ - *botnet_NORMAL_replay_goreplay.pcap* : Tráfego Normal replicado com a ferramenta GoReplay;
  - *botnet_SYN-FLOOD_replay_moongen.pcap* : Tráfego SYN-Flood replicado com a ferramenta GopherCap;
  - *botnet_SYN-FLOOD_replay_moongen.pcap* : Tráfego SYN-Flood replicado com a ferramenta MoonGen;
  - *botnet_SYN-FLOOD_replay_tcpreplay.pcap* : Tráfego SYN-Flood replicado com a ferramenta Tcpreplay.
