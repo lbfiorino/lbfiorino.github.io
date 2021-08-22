@@ -18,6 +18,7 @@ Grupo do dataset utilizado na replicação : *Botnet*
 
 ## Tráfego Replicado
  - *botnet_NORMAL_replay.pcap* : Tráfego Normal replicado com o script desenvolvido;
+ - *botnet_SYN-FLOOD_replay_moongen.pcap* : Tráfego SYN-Flood replicado com a ferramenta GopherCap;
  - *botnet_SYN-FLOOD_replay_moongen.pcap* : Tráfego SYN-Flood replicado com a ferramenta MoonGen;
  - *botnet_SYN-FLOOD_replay_tcpreplay.pcap* : Tráfego SYN-Flood replicado com a ferramenta Tcpreplay.
 
