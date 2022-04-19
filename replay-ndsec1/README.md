@@ -1,23 +1,36 @@
 # Arquivos do replay do dataset NDSec-1
 
-## Dataset NDSec-1
+## Dataset utilizado: NDSec-1
 https://www2.hs-fulda.de/NDSec/NDSec-1/  
 https://www2.hs-fulda.de/NDSec/NDSec-1/Files/  
 
 Grupo do dataset utilizado na replicação : *Botnet*
 
 ## Tráfego SYN-Flood
- - *botnet_SYN-FLOOD.pcap* : Tráfego SYN-Flood original;
+
+### Unidirecional
+ - *botnet_SYN-FLOOD.pcap* : Tráfego SYN-Flood original unidirecional;
  - *botnet_SYN-FLOOD_syn.pcap* : Apenas os pacotes SYN;
  - *botnet_SYN-FLOOD_syn_mac-ip-mod_fix-chksum.pcap* : Pacotes SYN com endereços MAC e IP alterados, e checksums recalculados.
+
+ ### Bidirecional
+ - *bidir_botnet_SYN-FLOOD.pcap* : Tráfego SYN-Flood original bidirecional.
  
 ## Tráfego Normal
- - *botnet_NORMAL.pcap* : Tráfego Normal original;
+
+### Unidirecional
+ - *botnet_NORMAL.pcap* : Tráfego Normal original unidirecional;
  - *botnet_NORMAL_mac-ip-httphost-mod_fix-chksum.pcap* : Tráfego Normal com endereços MAC, IP, HTTP Host alterados, e checksums recalculados;
  - *botnet_NORMAL_mac-ip-httphost-mod_fix-chksum_requests_0.gor* : Requisições HTTP extraídas do PCAP anterior com a ferramenta GoReplay para replicação.
 
+### Bidirecional
+ - *bidir_botnet_NORMAL.pcap* : Tráfego Normal original bidirecional;
+ - *bidir_botnet_NORMAL_httphost_mod_fix_chksum.pcap* : Tráfego Normal com endereços MAC, IP, HTTP Host alterados, e checksums recalculados;
+ - *bidir_botnet_NORMAL_httphost_mod_fix_chksum_0.gor* : Requisições HTTP extraídas do PCAP anterior com a ferramenta GoReplay para replicação.
+
 ## Tráfego Replicado
- - *botnet_NORMAL_replay_goreplay.pcap* : Tráfego Normal replicado com a ferramenta GoReplay;
+ - *botnet_NORMAL_replay_goreplay.pcap* : Tráfego Normal unidirecional replicado com a ferramenta GoReplay;
+ - *bidir_botnet_NORMAL_replay_goreplay* : Tráfego Normal bidirecional replicado com a ferramenta GoReplay;
  - *botnet_SYN-FLOOD_replay_gophercap.pcap* : Tráfego SYN-Flood replicado com a ferramenta GopherCap;
  - *botnet_SYN-FLOOD_replay_moongen.pcap* : Tráfego SYN-Flood replicado com a ferramenta MoonGen;
  - *botnet_SYN-FLOOD_replay_tcpreplay.pcap* : Tráfego SYN-Flood replicado com a ferramenta Tcpreplay.

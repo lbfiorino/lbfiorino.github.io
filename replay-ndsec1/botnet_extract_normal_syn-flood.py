@@ -186,8 +186,9 @@ def Extrai_Pacotes(DATASET_NAME, DATAFRAME, LABEL, PCAP_FILE, DST_IP, DST_PORT):
 
         # Comando para extrair frame numbers do arquivo pcap com a precisao em milisegundos
         CMD_frames = "tshark -n -T fields -e frame.number -r "+PCAP_FILE_TIME_MILLIS + \
-                            " -Y \"frame.time_epoch>=" + str(start_time_timestamp) + " and frame.time_epoch<=" + str(end_time_timestamp) + \
-                            " and ip.src=="+SRC_IP + " and tcp.srcport==" + SRC_PORT + " and ip.dst=="+DST_IP + " and tcp.dstport==" + DST_PORT+"\" > "+FRAMES_SAMPLE_FILE
+                            " -Y \"(frame.time_epoch>=" + str(start_time_timestamp) + " and frame.time_epoch<=" + str(end_time_timestamp) + \
+                            ") and ((ip.src=="+SRC_IP + " and tcp.srcport==" + SRC_PORT + " and ip.dst=="+DST_IP + " and tcp.dstport==" + DST_PORT+") or "+ \
+                            "(ip.dst=="+SRC_IP + " and tcp.dstport==" + SRC_PORT + " and ip.src=="+DST_IP + " and tcp.srcport==" + DST_PORT+")  )\" > "+FRAMES_SAMPLE_FILE
 
         TSHARK_FRAMES_CMDS.append(CMD_frames)
 
