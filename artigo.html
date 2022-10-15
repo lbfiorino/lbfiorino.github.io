@@ -1,0 +1,165 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+            background-color: whitesmoke;
+        }
+
+        div.ex1 {
+            width: 60%;
+            margin: auto;
+            border: 2px solid lightgray;
+            border-radius: 10px;
+            padding: 30px;
+            background-color: white;
+        }
+
+        hr.color1 {
+            border: 1px solid lightgrey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ex1">
+        <h1 id="github-luciano-b-fiorino">GitHub Luciano B. Fiorino</h1>
+        <img src="em_img.png" width="200">
+        <hr class="color1">
+
+        <h2 id="artigo">Artigo</h2>
+		<p>
+            <em><b>Reprodutibilidade e Extensibilidade de Datasets de Tráfego de Rede: um estudo da replicação de traces de pacotes</em></b>. (SBESC 2021 - WiP Track)
+            <a href="https://doi.org/10.5753/sbesc_estendido.2021.18500" target="_blank">https://doi.org/10.5753/sbesc_estendido.2021.18500</a>
+		</p>
+        <h3 id="experimento-de-replica-o-de-traces-de-pacotes-contidos-em-arquivos-pcap-de-um-dataset-da-literatura">
+            Experimento
+            de replicação de <em>traces</em> de pacotes contidos em arquivos PCAP de um <em>dataset</em> da literatura
+        </h3>
+        <p>Este experimento teve como objetivo investigar o uso de ferramentas abertas para replicação de
+            <em>traces</em> de
+            pacotes de um <em>dataset</em> da litetatura, a fim de coletar novas métricas de para os <em>traces</em>
+            originais.
+            A coleta de novos dados para os mesmos <em>traces</em> podem gerar um novo <em>datasets</em> ou estender o
+            <em>dataset</em> original, permitindo comparar a relevância das novas métricas com as originalmente
+            coletadas em
+            algoritmos de aprendizado de máquina.
+        </p>
+        <h4 id="_dataset_-utilizado-ndsec-1"><em>Dataset</em> utilizado: NDSec-1</h4>
+        <p><a href="https://www2.hs-fulda.de/NDSec/NDSec-1/" target="_blank">https://www2.hs-fulda.de/NDSec/NDSec-1/</a><br><a href="https://www2.hs-fulda.de/NDSec/NDSec-1/Files/" target="_blank">https://www2.hs-fulda.de/NDSec/NDSec-1/Files/</a>
+        </p>
+        <p>O <em>dataset</em> NDSec-1 é formado por 04 (quatro) grupos de <em>traces</em> contendo vários tipos de
+            tráfegos.
+            Para o experimento foi escolhido o grupo <strong><em>Botnet</em></strong>.</p>
+        <h4 id="tr-fegos-extra-dos-do-dataset-">Tráfegos extraídos do <em>dataset</em></h4>
+        <p>Os arquivos PCAP abaixo contém os tráfegos extraídos para o experimento de forma estratificada, onde um
+            arquivo
+            PCAP
+            foi gerado para cada tipo de tráfego.</p>
+        <ul>
+            <li><em><a href="https://lbfiorino.github.io/replay-ndsec1/botnet_SYN-FLOOD.pcap">botnet_SYN-FLOOD.pcap</a></em> : Tráfego de ataque
+                SYN-Flood;
+            </li>
+            <li><em><a href="https://lbfiorino.github.io/replay-ndsec1/botnet_NORMAL.pcap">botnet_NORMAL.pcap</a></em> : Tráfego Normal HTTP unidirecional.</li>
+	    <li><em><a href="https://lbfiorino.github.io/replay-ndsec1/bidir_botnet_NORMAL.pcap">bidir_botnet_NORMAL.pcap</a></em> : Tráfego Normal HTTP bidirecional.</li>
+        </ul>
+        <h4 id="tr-fegos-modificados">Tráfegos modificados</h4>
+        <p>Os arquivos PCAP abaixo contém os tráfegos extraídos e modificados para o experimento também de forma
+            estratificada.
+        </p>
+        <ul>
+            <li><em><a href="https://lbfiorino.github.io/replay-ndsec1/botnet_SYN-FLOOD_syn_mac-ip-mod_fix-chksum.pcap">botnet_SYN-FLOOD_syn_mac-ip-mod_fix-chksum.pcap</a></em> :
+                Pacotes SYN do tráfego SYN-Flood com endereços MAC e IP alterados, e checksums recalculados;</li>
+            <li><em><a href="https://lbfiorino.github.io/replay-ndsec1/botnet_NORMAL_mac-ip-httphost-mod_fix-chksum.pcap">botnet_NORMAL_mac-ip-httphost-mod_fix-chksum.pcap</a></em> :                
+                Tráfego Normal unidirecional com MAC, IP e HTTP <em>host/referer</em> alterados, e checksums recalculados</li>
+            <li><em><a href="https://lbfiorino.github.io/replay-ndsec1/botnet_NORMAL_mac-ip-httphost-mod_fix-chksum_requests_0.gor">botnet_NORMAL_mac-ip-httphost-mod_fix-chksum_requests_0.gor</a></em> :
+                Arquivo gerado com a ferramenta GoReplay contendo as requisições HTTP do tráfego Normal a partir do pcap unidirecional.</li>
+            <li><em><a href="https://lbfiorino.github.io/replay-ndsec1/bidir_botnet_NORMAL_mac-ip-httphost_mod_fix_chksum.pcap">bidir_botnet_NORMAL_mac-ip-httphost_mod_fix_chksum.pcap</a></em> :                
+                    Tráfego Normal bidirecional com MAC, IP e HTTP <em>host/referer</em> alterados, e checksums recalculados</li>
+            <li><em><a href="https://lbfiorino.github.io/replay-ndsec1/bidir_botnet_NORMAL_mac-ip-httphost_mod_fix_chksum_requests_0.gor">bidir_botnet_NORMAL_mac-ip-httphost_mod_fix_chksum_requests_0.gor</a></em> :
+                    Arquivo gerado com a ferramenta GoReplay contendo as requisições HTTP do tráfego Normal a partir do pcap bidirecional.</li>                
+        </ul>
+        <h4 id="capturas-dos-tr-fegos-replicados">Capturas dos Tráfegos Replicados</h4>
+        <p>Os arquivos PCAP abaixo contém as capturas das replicações dos tráfegos modificados com as ferramentas
+            utilizadas
+            no
+            experimento.</p>
+        <ul>
+            <li><em><a href="https://lbfiorino.github.io/replay-ndsec1/botnet_NORMAL_replay_goreplay.pcap">botnet_NORMAL_replay_goreplay.pcap </a></em> : Tráfego Normal unidirecional replicado com a ferramenta GoReplay</li>
+            <li><em><a href="https://lbfiorino.github.io/replay-ndsec1/bidir_botnet_NORMAL_replay_goreplay.pcap">bidir_botnet_NORMAL_replay_goreplay.pcap </a></em> : Tráfego Normal bidirecional replicado com a ferramenta GoReplay</li>		
+            <li><em><a href="https://lbfiorino.github.io/replay-ndsec1/botnet_SYN-FLOOD_replay_gophercap.pcap">botnet_SYN-FLOOD_replay_gophercap.pcap</a></em>
+                :
+                Tráfego SYN-Flood replicado com a ferramenta GopherCap;</li>
+            <li><em><a href="https://lbfiorino.github.io/replay-ndsec1/botnet_SYN-FLOOD_replay_moongen.pcap">botnet_SYN-FLOOD_replay_moongen.pcap</a></em>
+                :
+                Tráfego SYN-Flood replicado com a ferramenta MoonGen;</li>
+            <li><em><a href="https://lbfiorino.github.io/replay-ndsec1/botnet_SYN-FLOOD_replay_tcpreplay.pcap">botnet_SYN-FLOOD_replay_tcpreplay.pcap</a></em>
+                : Tráfego SYN-Flood replicado com a ferramenta Tcpreplay.</li>
+        </ul>
+        <h4 id="c-digos-python">Códigos Python</h4>
+        <p>A seguir são disponibilizadas os códigos utilizados em cada passo do experimento.</p>
+        <ol>          
+            <li><em><a href="https://lbfiorino.github.io/replay-ndsec1/edit_packet_timestamp.py">edit_packet_timestamp.py</a></em> : Script para
+                editar a precisão (casas decimais) do <em>timestamp</em> para extrair os pacotes corretamente.<br>Este
+                script altera as casas decimais do PCAP original de 6 para 3 casas, pois nas amostras do dataset a
+                precisão está com 3 casas deciamais. Um novo arquivo PCAP para o <em>script</em> do item 2.
+            </li>
+            <li>
+                <p><em><a href="https://lbfiorino.github.io/replay-ndsec1/botnet_extract_normal_syn-flood.py">botnet_extract_normal_syn-flood.py</a></em>
+                    : Script para extrair os tráfegos originais Normal/Syn-Flood do <em>dataset</em> NDSec-1 e gerar os
+                    arquivos PCAP para replicação.<br>Este script extrai do PCAP gerado no item 1 os números dos frames
+                    dos tráfegos de interesse e, posteriormente, extrais os pacotes correspondentes aos números dos
+                    frames do PCAP original.</p>
+            </li>
+            <li>
+                <p><em><a href="https://lbfiorino.github.io/replay-ndsec1/edit_mac_ip_pcap.py">edit_mac_ip_pcap.py</a></em> : Script para alterar
+                    os endereços IP e MAC dos pacotes;</p>
+            </li>
+            <li>
+                <p><em><a href="https://lbfiorino.github.io/replay-ndsec1/edit_http_request_pcap.py">edit_http_request_pcap.py</a></em> : Script
+                    para editar os campos <em>Host</em> e <em>Referer</em> do cabeçalho HTTP do tráfego Normal;</p>
+            </li>
+            <li>
+                <p><em><a href="https://lbfiorino.github.io/replay-ndsec1/agent-gnocchi-offline.py">agent-gnocchi-offline.py</a></em> : Script para coletar as métricas de nuvem no banco de dados Gnocchi;</p>
+            </li>            
+        </ol>
+
+        <p>Para corrigir os checksums IP/TCP dos pacotes contidos nos arquivo PCAPs gerados, foi utilizada a ferramenta <code>tcprewrite</code>.</p>
+        <!-- HTML generated using hilite.me -->
+        <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+            <pre style="margin: 0; line-height: 125%"><span style="color: #888888"># Fix checksum</span><br><span style="color: #996633">$ </span>tcprewrite -C -i &lt;INFILE.pcap&gt; -o &lt;OUTFILE.pcap&gt;</pre></div>
+
+        <h4 id="dataset-de-telemetria-gerado">Dataset de Telemetria Gerado</h4>
+        <p><em>Dataset</em> gerado a partir das coletas das métricas do serviço de telemetria OpenStack. A política de
+            coleta do
+            serviço de telemetria estava configurada com granularidade de 5 segundos. Dessa forma, cada amostra do
+            <em>dataset</em> gerado corresponde a coletas das métricas a cada 5 segundos.
+        </p>
+        <p>Para compor o dataset foram considerados os dados coletados a partir da replicação dos <em>traces</em> com as ferramentas <em>GoReplay</em> e <em>Tcpreplay</em>.</p>
+        <ul>
+            <li>
+                <p><em><a href="https://lbfiorino.github.io/replay-ndsec1/telemetry_dataset_replay.csv">telemetry_dataset_replay.csv</a></em> : Dataset de telemetria;</p>
+            </li>
+            <li>
+                <p><em><a href="https://lbfiorino.github.io/replay-ndsec1/telemetry_normal_goreplay.csv">telemetry_normal_goreplay.csv</a></em> : Telemetria do tráfego Normal replicado com a ferramenta GoReplay;</p>
+            </li>
+            <li>
+                <p><em><a href="https://lbfiorino.github.io/replay-ndsec1/telemetry_syn-flood_gophercap.csv">telemetry_syn-flood_gophercap.csv</a></em> : Telemetria do tráfego SYN-Flood replicado com a ferramenta GopherCap;</p>
+            </li>            
+            <li>
+                <p><em><a href="https://lbfiorino.github.io/replay-ndsec1/telemetry_syn-flood_moongen.csv">telemetry_syn-flood_moongen.csv</a></em> : Telemetria do tráfego SYN-Flood replicado com a ferramenta Moongen;</p>
+            </li>
+            <li>
+                <p><em><a href="https://lbfiorino.github.io/replay-ndsec1/telemetry_syn-flood_tcpreplay.csv">telemetry_syn-flood_tcpreplay.csv</a></em> : Telemetria do tráfego SYN-Flood replicado com a ferramenta Tcpreplay.</p>
+            </li>
+        </ul>
+
+        <br>
+        <br>
+        <hr class="color1">
+        <p align="center">2022</p>
+    </div>
+
+
+
+</body></html>
